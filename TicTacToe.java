@@ -25,8 +25,10 @@ public class TicTacToe {
                     JButton button = (JButton) e.getSource();
                     if (xTurn) {
                         button.setText("TIK");
+                        button.setBackground(Color.GREEN);
                     } else {
                         button.setText("TOK");
+                        button.setBackground(Color.RED);
                     }
                     button.setEnabled(false);
                     xTurn = !xTurn;
@@ -67,6 +69,8 @@ public class TicTacToe {
             return;
         }
         if (buttons[2].getText().equals(buttons[4].getText()) && buttons[2].getText().equals(buttons[6].getText()) && !buttons[2].isEnabled()) {
+
+
             JOptionPane.showMessageDialog(frame, buttons[2].getText() + " wins !");
             resetGame();
             return;
