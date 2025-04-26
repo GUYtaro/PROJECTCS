@@ -6,7 +6,7 @@ public class TicTacToe {
     private static JFrame frame;
     private static JPanel panel;
     private static JButton[] buttons = new JButton[9];
-    private static boolean xTurn = true;
+    private static boolean KohTurn = true;
 
     public static void main(String[] args) {
         frame = new JFrame("CSCAMP - TIKTOK");
@@ -23,15 +23,15 @@ public class TicTacToe {
             buttons[i].addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     JButton button = (JButton) e.getSource();
-                    if (xTurn) {
-                        button.setText("TIK");
-                        button.setBackground(Color.GREEN);
+                    if (KohTurn) {
+                        button.setText("KOH");
+                        button.setBackground(Color.WHITE);
                     } else {
-                        button.setText("TOK");
+                        button.setText("KAE");
                         button.setBackground(Color.RED);
                     }
                     button.setEnabled(false);
-                    xTurn = !xTurn;
+                    KohTurn = !KohTurn;
                     checkForWinner();
                 }
             });
@@ -95,6 +95,6 @@ public class TicTacToe {
             buttons[i].setText("");
             buttons[i].setEnabled(true);
         }
-        xTurn = true;
+        KohTurn = true;
     }
 }
