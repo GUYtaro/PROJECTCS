@@ -9,7 +9,7 @@ public class TicTacToe {
     private static boolean KohTurn = true;
 
     public static void main(String[] args) {
-        frame = new JFrame("CSCAMP - TIKTOK");
+        frame = new JFrame("CSCAMP - KOHKAE");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panel = new JPanel();
