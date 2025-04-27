@@ -1,12 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Scanner;
 
 public class TicTacToe {
     private static JFrame frame;
     private static JPanel panel;
     private static JButton[] buttons = new JButton[9];
     private static boolean KohTurn = true;
+
+    
 
     public static void main(String[] args) {
         frame = new JFrame("CSCAMP - KOHKAE");
@@ -40,6 +43,30 @@ public class TicTacToe {
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setSize(1920, 1080);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println(": Are you ready to play? (Y)");
+        String play = sc.nextLine();
+        sc.close();
+        switch (play) {
+            case "Y":
+                System.out.println("Good, I'll sent you to play KOHKAE GAME!!!");
+                break;
+            case"y":
+                System.out.println("Good, I'll sent you to play KOHKAE GAME!!!");
+                break;
+            case "Yes":
+                System.out.println("Good, I'll sent you to play KOHKAE GAME!!!");
+                break;
+            case "yes":
+                System.out.println("Good, I'll sent you to play KOHKAE GAME!!!");
+                break;
+            default:
+                System.out.println("Okay then, Bye");
+                System.exit(0) ;
+                break;
+        }
+
         frame.setVisible(true);
     }
 
