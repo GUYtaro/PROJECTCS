@@ -39,7 +39,7 @@ public class TicTacToe {
         }
 
         frame.add(panel, BorderLayout.CENTER);
-        frame.setSize(800, 800);
+        frame.setSize(1920, 1080);
         frame.setVisible(true);
     }
 
@@ -47,7 +47,7 @@ public class TicTacToe {
         // Check rows
         for (int i = 0; i < 9; i += 3) {
             if (buttons[i].getText().equals(buttons[i + 1].getText()) && buttons[i].getText().equals(buttons[i + 2].getText()) && !buttons[i].isEnabled()) {
-                JOptionPane.showMessageDialog(frame, buttons[i].getText() + " wins !");
+                JOptionPane.showMessageDialog(frame, buttons[i].getText() + " Wins !");
                 resetGame();
                 return;
             }
@@ -56,7 +56,7 @@ public class TicTacToe {
         // Check columns
         for (int i = 0; i < 3; i++) {
             if (buttons[i].getText().equals(buttons[i + 3].getText()) && buttons[i].getText().equals(buttons[i + 6].getText()) && !buttons[i].isEnabled()) {
-                JOptionPane.showMessageDialog(frame, buttons[i].getText() + " wins !");
+                JOptionPane.showMessageDialog(frame, buttons[i].getText() + " Wins !");
                 resetGame();
                 return;
             }
@@ -64,14 +64,14 @@ public class TicTacToe {
 
         // Check diagonals
         if (buttons[0].getText().equals(buttons[4].getText()) && buttons[0].getText().equals(buttons[8].getText()) && !buttons[0].isEnabled()) {
-            JOptionPane.showMessageDialog(frame, buttons[0].getText() + " wins !");
+            JOptionPane.showMessageDialog(frame, buttons[0].getText() + " Wins !");
             resetGame();
             return;
         }
         if (buttons[2].getText().equals(buttons[4].getText()) && buttons[2].getText().equals(buttons[6].getText()) && !buttons[2].isEnabled()) {
 
 
-            JOptionPane.showMessageDialog(frame, buttons[2].getText() + " wins !");
+            JOptionPane.showMessageDialog(frame, buttons[2].getText() + " Wins !");
             resetGame();
             return;
         }
@@ -85,7 +85,7 @@ public class TicTacToe {
             }
         }
         if (tie) {
-            JOptionPane.showMessageDialog(frame, "Tie game !");
+            JOptionPane.showMessageDialog(frame, "Tie Game !");
             resetGame();
         }
     }
@@ -94,6 +94,7 @@ public class TicTacToe {
         for (int i = 0; i < 9; i++) {
             buttons[i].setText("");
             buttons[i].setEnabled(true);
+            buttons[i].setBackground(Color.BLACK);
         }
         KohTurn = true;
     }
